@@ -5,7 +5,8 @@ The main goal of this project was to create a Machine Learning model that predic
 
 The main reason I started this project was because I am a huge football fan, mainly from the country and city I live in (Monterrey, Mexico), but I also enjoy watching football from other countries like Brazil, England and even some regions like South America and Europe. And recently in june 2025 the Club World Cup took place in the US and it was very exciting to see teams from all around the world playing against each other, I even got the opportunity to go to one of the matches from the team I support (Rayados). However, something that caught my eye, not just from the match I went to see, but from matches I could watch in live TV, was the attendance of these events, mainly the fact that some of them had very low.
 
-<img width="746" height="455" alt="download" src="https://github.com/user-attachments/assets/7639f2ab-4986-4b38-9d86-43ad4702a470" />
+<img width="746" height="455" alt="image" src="https://github.com/user-attachments/assets/500aaf58-e7c2-4b2b-bfa9-d0b477792dd5" />
+
 
 The reason why Club America is in the graph is because the data includes the play-off against LAFC.
 
@@ -13,8 +14,8 @@ Green: avg >40,000, Yellow: avg > 25,000, Red: avg < 25,000
 
 This image represents the average attendance of every team that participated in the Club World Cup 2025, as we can see, there are some clubs that had a low attendance, at least compared to what FIFA expected, and thats why we saw some matches with empty stadiums or only half filled. The main reason could be that a club's fanbase is very different from a national team, this meaning that teams like Real Madrid, Bayern, PSG and so on have huge fanbases because they are recognized all around the world, but other teams like, Pachuca, Mamelodi Sundowns or Ulsan HD are only famous in their country, or worse, their city. Another important aspect is the host country/city, where people from Asia, South America and even Europe might find it difficult to travel to the US considering distance, timing, prices, etc, which is very important considering that clubs have a different fanbase than national teams. 
 However, if distance and prices and timing are a the main reason, then the World Cup would also have low average attendance, which is not the case, in Qatar, not a single team averaged less than 40,000, which is great. This confirms that national teams and events including them, are more attractive to not just football fans but also locals and tourists all around the world.
-<img width="639" height="455" alt="image" src="https://github.com/user-attachments/assets/6397979d-26d5-4b6f-b548-9c1be197f436" />
 
+<img width="639" height="455" alt="image (1)" src="https://github.com/user-attachments/assets/55229c06-d56e-423d-a31a-3959ba4afe23" />
 
 And when I noticed this I started questioning myself, if the in 2026 will be the World Cup and the majority of the matches will take place in the US, will the attendances be similar? Will we have some matches with very low filling rate/empty stadiums? What will be the attendance expected for every match?
 In a few words, we would probably have a world cup similar to the one in 1994, which had an average of 68,991 spectators per match (the highest one in history), which in this year could be a bit lower considering there will be some smaller stadiums which are in Canada and Mexico. However, that doesn't deny the fact that we still might have some matches where the filling rate might be a bit low. And that's what I wanted to find out.
@@ -24,7 +25,8 @@ Using a free API from ESPN data, I was able to extract all the data registered f
 Using a random forest generator from scikit-learn I was able to introduce all this data and test it to have a functional machine learning model that has a **MAE: 2823.75** (Absolute Error = abs(attendance-prediction)). Once the model was ready I started testing with previous tournaments to see what I could use to improve the model, as well notice any pattern, like outliers or missing data. During testing I noticed that tournaments where national teams face each other not just are more popular, but also that the model gives a more accurate prediction, which is great for predicting this year's world cup, but not so great since for club tournaments, like Liga MX, UEFA Champions League, Club World Cup, etc, the model does get a higher MAE, but I am still working to improve that number.
 
 For now, I am trying to get the best results for this World Cup, and considering the variables mentioned, the World Cup in 2026 will have an average of **60,448** spectators per match and a total of **6,286,656** spectators throughout all the tournament, which would make this world cup the second with the highest average per match, and the first one with the most spectators of all time. The knockout matches were created assuming that the bracket will be the following:
-<img width="1890" height="813" alt="image" src="https://github.com/user-attachments/assets/65f75e90-5c1c-494b-acf3-adebee04d350" />
+<img width="1891" height="824" alt="image" src="https://github.com/user-attachments/assets/b2afc9f2-54d7-495f-85a9-e793bb1de2b3" />
+
 
 Since I tested the model with past world cups, and it got an average MAE lower than 2,000, we can say that it is very safe and reliable to predict the World Cup attendance in 2026 with this model. For now you can find the data in the file results_wc2026.csv, which is a file with every match (the teams in the knockout stage can change), but here is some data from the predictions:
 
@@ -51,7 +53,7 @@ Since I tested the model with past world cups, and it got an average MAE lower t
 | Canada         | Bosnia and Herzegovina | Toronto |     40174 |
 
 # Average spectators in every city
-<img width="663" height="455" alt="image" src="https://github.com/user-attachments/assets/4db6021d-4127-45a6-bf93-5450b78856f2" />
+<img width="663" height="455" alt="image (2)" src="https://github.com/user-attachments/assets/2c7b43a6-f497-4ca8-b0b3-007728fd6aad" />
 
 # All the data
 | homeTeamName           | awayTeamName           | city            |   modpred |
@@ -161,4 +163,4 @@ Since I tested the model with past world cups, and it got an average MAE lower t
 | Croatia                | England                | Miami Gardens   |     60696 |
 | Germany                | Portugal               | East Rutherford |     84385 |
 
-# NOTE: THE WHOLE DATA COULDN'T BE ADDED BECAUSE GITHUB DOESNT ALLOW FILES OVER 100 MB
+# NOTE: THE WHOLE DATA COULDN'T BE ADDED BECAUSE GITHUB DOESN'T ALLOW FILES OVER 100 MB
